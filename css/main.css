@@ -1,0 +1,157 @@
+@import url(./reset.css);
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	background-color: #ffffff;
+}
+
+a {
+	color: #181818;
+	text-decoration: none;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding-bottom: 15px;
+	border-bottom: 3px #a0a0a0 solid;
+}
+
+.header-title {
+	margin: auto;
+	font-size: 46px;
+	font-weight: 700;
+}
+
+.logo {
+	width: 150px;
+}
+
+.main {
+	margin: 50px 0 100px 0;
+}
+
+.main-details {
+	margin-bottom: 3em;
+	cursor: pointer;
+	padding-bottom: 25px;
+	border-bottom: 1px #cbcbcb solid;
+}
+
+.main-summary {
+	font-size: 32px;
+	font-weight: 500;
+	color: #181818;
+	transition: all 0.15s;
+}
+
+.main-summary:hover {
+	color: #585858;
+}
+
+.main-text {
+	white-space: pre-line;
+	padding-left: 30px;
+	font-size: 24px;
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.footer-title {
+	font-size: 38px;
+	font-weight: 600;
+	padding-bottom: 30px;
+}
+
+.footer-link {
+	position: relative;
+	color: #181818;
+	font-size: 22px;
+	margin-bottom: 20px;
+	padding: 0 10px;
+}
+
+.footer-link::after {
+	content: '';
+	position: absolute;
+	background-color: #1e1e1e;
+	height: 2px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+	transition: 0.2s;
+}
+
+.footer-link:hover::after {
+	width: 100%;
+}
+
+@media (max-width: 1440px){
+	.header-title {
+		font-size: 38px;
+	}
+}
+
+@media (max-width: 1100px) {
+	.header-title {
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 980px) {
+	.header-title {
+		font-size: 28px;
+	}
+}
+
+@media (max-width: 560px) {
+	.main-summary {
+		font-size: 26px;
+	}
+	.main-text {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 400px) {
+	.logo {
+		width: 100px;
+	}
+	.header-title {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 360px) {
+	.main-text {
+		padding-left: 15px;
+	}
+	.footer-title {
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 280px) {
+	.main-text {
+		padding-left: 5px;
+	}
+	.footer-title {
+		font-size: 28px;
+	}
+	.footer-link {
+		font-size: 18px;
+	}
+}
